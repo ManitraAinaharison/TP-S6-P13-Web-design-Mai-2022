@@ -4,6 +4,8 @@ hote mysql-agw-news-tp-s6.alwaysdata.net
 
 dbname agw-news-tp-s6_bdd
 
+------------------------------------------------------------
+
 Avant:
 mobile = 86%
 bureau = 98%
@@ -13,6 +15,12 @@ Les éléments d'image ne possèdent pas de width ni de height explicites
 Diffusez des éléments statiques grâce à des règles de cache efficaces
 
 Apres:
-mobile = 86%
-bureau = 98%
+mobile = 82%
+bureau = 99%
+
+redimensionnement des images
+ajout width et height sur tout les images
+ajout cache serveur 
+minifier css
+
 
