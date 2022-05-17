@@ -25,4 +25,10 @@ if ( ! function_exists('lib_url')) {
 	}
 }
 
+if ( ! function_exists('upfile_url')) {
+	function upfile_url($file) {
+		return site_url("uploadedFile/".$file);
+	}
+}
+
 ?>

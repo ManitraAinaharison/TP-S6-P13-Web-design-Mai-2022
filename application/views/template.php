@@ -2,10 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title><?php echo "aa" ?></title>
+        <title><?php echo $titrePage ?></title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Bootstrap News Template - Free HTML Templates" name="keywords">
-        <meta content="Bootstrap News Template - Free HTML Templates" name="description">
+        <meta content="agw news, rechauffement climatique, actualités, environnement" name="keywords">
+        <meta content="Les dernieres nouvelles sur le rechauffement climatique" name="description">
 
         <!-- Favicon -->
         <link href="<?php echo img_url('favicon.ico') ?>" rel="icon">
@@ -34,14 +34,6 @@
                             <p><i class="fas fa-phone-alt"></i>+034 23 456 78</p>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="tb-menu">
-                            <a href="">About</a>
-                            <a href="">Privacy</a>
-                            <a href="">Terms</a>
-                            <a href="">Contact</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -67,8 +59,10 @@
                     </div>
                     <div class="col-lg-3 col-md-4">
                         <div class="b-search">
-                            <input type="text" placeholder="Recherche">
-                            <button><i class="fa fa-search"></i></button>
+                            <form action="<?php echo site_url('') ?>" method="get">
+                                <input type="text" name="q" placeholder="Recherche">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -87,9 +81,9 @@
 
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto">
-                            <a href="<?php echo site_url('') ?>" class="nav-item nav-link active">Accueil</a>
-                            <a href="<?php echo site_url('actualites') ?>" class="nav-item nav-link">Actualités</a>
-                            <a href="<?php echo site_url('evenements') ?>" class="nav-item nav-link">Evènements</a>
+                            <a href="<?php echo site_url('') ?>" class="nav-item nav-link <?php if($active == 0) echo "active" ?>">Accueil</a>
+                            <a href="<?php echo site_url('actualites') ?>" class="nav-item nav-link <?php if($active == 1) echo "active" ?>">Actualités</a>
+                            <a href="<?php echo site_url('evenements') ?>" class="nav-item nav-link <?php if($active == 2) echo "active" ?>">Evènements</a>
                         </div>
                     </div>
                 </nav>
@@ -145,7 +139,7 @@
                     </div>
 
                     <div class="col-md-6 template-by">
-                        <p>Template By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                        <p>R. Manitra Ainaharison <a href="#">ETU001183</a></p>
                     </div>
                 </div>
             </div>

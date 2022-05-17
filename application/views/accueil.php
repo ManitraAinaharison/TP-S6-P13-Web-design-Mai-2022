@@ -2,65 +2,26 @@
 <div class="top-news">
     <div class="container">
         <div class="rubric-title">
-            <h2>Evènements</h2>
-            <button>Voir tout</button>
+            <h1>Evènements</h1>
+            <button><a href="<?php echo site_url('evenements') ?>">Voir tout</a></button>
         </div>
         <hr class="double-dash">
         <div class="row">
             <div class="col-md-6 tn-left">            
                 <div class="row tn-slider">
-                    <div class="col-md-6">
+                    <?php foreach ($listeEvents as $event) { ?>
+                    <div class="col-md-12">
                         <div class="tn-img">
-                            <img src="img/news-450x350-1.jpg" />
+                            <img 
+                                src="<?php echo upfile_url($event['image']) ?>" 
+                                alt="<?php echo $event['titre'] ?>"
+                            />
                             <div class="tn-title">
-                                <a href="">Lorem ipsum dolor sit amet</a>
+                                <a href="<?php echo site_url($event["nom_categorie"].'/'.$event["url"].'-'.$event["id"]) ?>"><?php echo $event['titre'] ?></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="tn-img">
-                            <img src="img/news-450x350-2.jpg" />
-                            <div class="tn-title">
-                                <a  href="">Integer hendrerit elit eget purus sodales maximus</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 tn-right">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="tn-img">
-                            <img src="img/news-350x223-1.jpg" />
-                            <div class="tn-title">
-                                <a href="">Lorem ipsum dolor sit</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="tn-img">
-                            <img src="img/news-350x223-2.jpg" />
-                            <div class="tn-title">
-                                <a href="">Lorem ipsum dolor sit</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="tn-img">
-                            <img src="img/news-350x223-3.jpg" />
-                            <div class="tn-title">
-                                <a href="">Lorem ipsum dolor sit</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="tn-img">
-                            <img src="img/news-350x223-4.jpg" />
-                            <div class="tn-title">
-                                <a href="">Lorem ipsum dolor sit</a>
-                            </div>
-                        </div>
-                    </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -74,21 +35,26 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="rubric-title">
-                    <h2>Actualités</h2>
-                    <button>Voir tout</button>
+                    <h1>Actualités</h1>
+                    <button><a href="<?php echo site_url('actualites') ?>">Voir tout</a></button>
                 </div>
                 <hr class="double-dash">
                 <div class="row">
-                    <?php for ($i=0; $i < 5; $i++) { ?>
+                    <?php foreach ($listeActus as $actu) { ?>
                     <div class="card-news">
                         <div class="card-img">    
-                            <img src="img/news-350x223-1.jpg" title="Lorem ipsum dolor sit " />
+                            <img 
+                                src="<?php echo upfile_url($actu['image']) ?>" 
+                                alt="<?php echo $actu['titre'] ?>"
+                            />
                         </div>
                         <div class="card-content">
-                            <h3 class="card-detail" title="Rechauffement climatique Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, assumenda.">Rechauffement climatique Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, assumenda.</h3>
-                            <span class="card-date">12 Mai 2022, 14:38</span>
-                            <p class="card-detail">Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Autem dolor culpa illo suscipit quas sequi doloribus harum mollitia consequatur totam? Velit, fugiat fuga vel sapiente numquam omnis voluptatibus. Provident, praesentium.</p>
-                            <a href="huhu"><button class="card-read-more">Voir plus</button></a>
+                            <h3 class="card-detail" title="<?php echo $actu['titre'] ?>"><?php echo $actu['titre'] ?></h3>
+                            <span class="card-date">Par <?php echo $actu['nom_user']." ".$actu['prenom_user'] ?>, le <?php echo $actu['date_ajout'] ?></span>
+                            <p class="card-detail"><?php echo $actu['resume'] ?></p>
+                            <a href="<?php echo site_url($actu["nom_categorie"].'/'.$actu["url"].'-'.$actu["id"]) ?>">
+                                <button class="card-read-more">Voir plus</button>
+                            </a>
                         </div>
                     </div>
                     <?php } ?>
@@ -97,7 +63,7 @@
 
             <div class="col-lg-4">
                 <div class="mn-list">
-                    huhu
+                    <img src="<?php echo img_url('flyer.jpg') ?>" alt="">
                 </div>
             </div>
         </div>

@@ -1,0 +1,18 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+}
+.main-content {
+    background: rgb(236, 241, 245);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.login-content {
+    width: 300px;
+    height: 20%;
+    margin-top: 10%;
+    border-radius: 3px;
+}
