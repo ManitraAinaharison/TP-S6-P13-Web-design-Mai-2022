@@ -30,7 +30,12 @@
 
             <div class="col-lg-4">
                 <div class="mn-list">
-                    <img src="<?php echo img_url('flyer.jpg') ?>" alt="">
+                    <img 
+                        src="<?php echo img_url('flyer.jpg') ?>" 
+                        alt=""
+                        width="100%"
+                        height ="auto"
+                    >
                 </div>
             </div>
         </div>

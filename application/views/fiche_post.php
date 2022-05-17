@@ -8,6 +8,8 @@
                         <img 
                             src="<?php echo upfile_url($actu['image']) ?>"
                             alt="<?php echo $actu['titre'] ?>"
+                            width="100%"
+                            height ="auto"
                         />
                     </div>
                     <div class="sn-content">

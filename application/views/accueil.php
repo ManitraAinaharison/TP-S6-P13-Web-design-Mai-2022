@@ -15,6 +15,8 @@
                             <img 
                                 src="<?php echo upfile_url($event['image']) ?>" 
                                 alt="<?php echo $event['titre'] ?>"
+                                width="100%"
+                                height ="auto"
                             />
                             <div class="tn-title">
                                 <a href="<?php echo site_url($event["nom_categorie"].'/'.$event["url"].'-'.$event["id"]) ?>"><?php echo $event['titre'] ?></a>

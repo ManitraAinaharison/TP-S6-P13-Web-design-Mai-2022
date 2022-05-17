@@ -31,7 +31,8 @@
                 <td>
                     <img 
                         src="<?php echo upfile_url($post['image']) ?>"
-                        width="100"
+                        width="100%"
+                        height ="auto"
                     >
                 </td>
                 <td><?php echo $post['titre'] ?></td>
