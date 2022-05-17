@@ -5,7 +5,8 @@ FrontOffice:
 
 BackOffice: 
     https://agw-news-tp-s6.alwaysdata.net/admin/login
-    username: admin
-    mdp: admin
+    
+username: admin
+mdp: admin
 
 ETU001183

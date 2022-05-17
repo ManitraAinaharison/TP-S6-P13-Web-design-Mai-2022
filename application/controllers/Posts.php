@@ -74,11 +74,6 @@ class Posts extends CI_Controller {
 		$data['titrePage'] = $actu[0]['titre'];
 		$data['actu'] = $actu[0];
 		$this->load->view('template', $data);
-	}
-
-	public function aa() {
-		$te = "Réchauffement climatique : toutes les canicules seront renforcées, selon des experts";
-		$this->load->model('Util_model');
-        echo $this->Util_model->slugify($te);
+		$this->output->cache(64800);
 	}
 }
