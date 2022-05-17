@@ -18,43 +18,6 @@
                         <p><?php echo $actu['contenu'] ?></p>
                     </div>
                 </div>
-                <div class="sn-related">
-                    <h2>Lire aussi</h2>
-                    <div class="row sn-slider">
-                        <div class="col-md-4">
-                            <div class="sn-img">
-                                <img src="img/news-350x223-1.jpg" />
-                                <div class="sn-title">
-                                    <a href="">Interdum et fames ac ante</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="sn-img">
-                                <img src="img/news-350x223-2.jpg" />
-                                <div class="sn-title">
-                                    <a href="">Interdum et fames ac ante</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="sn-img">
-                                <img src="img/news-350x223-3.jpg" />
-                                <div class="sn-title">
-                                    <a href="">Interdum et fames ac ante</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="sn-img">
-                                <img src="img/news-350x223-4.jpg" />
-                                <div class="sn-title">
-                                    <a href="">Interdum et fames ac ante</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <div class="col-lg-4">

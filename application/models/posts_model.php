@@ -32,7 +32,7 @@ class posts_model extends CI_Model {
         order by date_ajout desc
         limit %s,%s", $idCategorie, $deb, $limit);
         if($idCategorie == null) {
-            $req = "select * from post_detail order by date_ajout desc";
+            $req = "select * from post_detail order by date_ajout desc limit ".$deb.",".$limit;
         }
         $query = $this->db->query($req); 
         return $query->result_array();
@@ -75,6 +75,11 @@ class posts_model extends CI_Model {
         values
         ('%s', '%s', %s, %s, %s, sysdate(), '%s', '%s') ", $idCategorie, '1', $titre, $resume, $contenu, $path, $url);
         $this->db->query($req);
+    }
+
+    public function deletePost($id) {
+        $this->db->where('id', $id);
+        $this->db->delete('post');
     }
 }
 

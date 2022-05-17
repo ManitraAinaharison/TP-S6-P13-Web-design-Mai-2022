@@ -1,0 +1,5 @@
+username 268551
+password mdpprom13
+hote mysql-agw-news-tp-s6.alwaysdata.net
+
+dbname agw-news-tp-s6_bdd

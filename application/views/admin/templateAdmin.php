@@ -10,7 +10,7 @@
     <meta name="description"
     content="Ample Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
-    <title>Ample Admin Lite Template by WrapPixel</title>
+    <title>AGW News</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo img_url('favicon.png') ?>">
     <link href="<?php echo css_url('style-admin.min.css') ?>" rel="stylesheet">
@@ -55,13 +55,13 @@
             <div class="scroll-sidebar">
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li class="sidebar-item pt-2">
+                        <!-- <li class="sidebar-item pt-2">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="dashboard.html"
                             aria-expanded="false">
-                            <i class="far fa-clock" aria-hidden="true"></i>
-                            <span class="hide-menu">Dashboard</span>
-                        </a>
-                    </li>
+                                <i class="far fa-clock" aria-hidden="true"></i>
+                                <span class="hide-menu">Dashboard</span>
+                            </a>
+                        </li> -->
                     </ul>
                 </nav>
             </div>

@@ -28,12 +28,14 @@ class Admin extends CI_Controller {
     }
 
 
-	public function index() {
+	public function listePosts($page) {
+        $page = (int) $page;
         $this->load->model('posts_model');
-        $listePosts = $this->posts_model->getlistePosts(null, 1);
+        $listePosts = $this->posts_model->getlistePosts(null, $page);
         $data = array();
 		$data['view'] = 'liste_posts';
 		$data['listePosts'] = $listePosts;
+        $data['pagination'] = $page;
 		$this->load->view('admin/templateAdmin', $data);	
 	}	
     
@@ -44,6 +46,18 @@ class Admin extends CI_Controller {
 		$data['view'] = 'ajout_post';
 		$data['listeCateg'] = $listeCateg;
 		$this->load->view('admin/templateAdmin', $data);	
+    }
+
+    public function deletePost($page, $id) {
+        $page = (int) $page;
+        $this->load->model('posts_model');
+        $this->posts_model->deletePost($id);
+        $listePosts = $this->posts_model->getlistePosts(null, $page);
+        $data = array();
+		$data['view'] = 'liste_posts';
+		$data['listePosts'] = $listePosts;
+        $data['pagination'] = $page;
+		$this->load->view('admin/templateAdmin', $data);		
     }
 
     public function ajouterPost() {

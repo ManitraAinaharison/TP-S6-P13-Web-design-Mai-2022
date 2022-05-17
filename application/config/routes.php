@@ -58,3 +58,5 @@ $route['actualites/page/(:num)'] = 'posts/actualites/$1';
 $route['evenements/page/(:num)'] = 'posts/evenements/$1';
 $route['(:any)/(:any)-(:num)'] = 'posts/fichePost/$1/$2/$3';
 $route['admin/login'] = 'Login';
+$route['admin'] = 'admin/listePosts/1';
+$route['admin/page/(:num)'] = 'admin/listePosts/$1';

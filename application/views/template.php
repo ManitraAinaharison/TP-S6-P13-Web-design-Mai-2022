@@ -8,7 +8,7 @@
         <meta content="Les dernieres nouvelles sur le rechauffement climatique" name="description">
 
         <!-- Favicon -->
-        <link href="<?php echo img_url('favicon.ico') ?>" rel="icon">
+        <link href="<?php echo img_url('favicon.png') ?>" rel="icon">
 
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet"> 

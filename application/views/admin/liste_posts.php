@@ -23,8 +23,6 @@
                 <th class="border-top-0">Titre</th>
                 <th class="border-top-0">Categorie</th>
                 <th class="border-top-0"></th>
-                <th class="border-top-0"></th>
-                <th class="border-top-0"></th>
             </tr>
         </thead>
         <tbody>
@@ -39,19 +37,7 @@
                 <td><?php echo $post['titre'] ?></td>
                 <td><?php echo $post['nom_categorie'] ?></td>
                 <td>
-                    <a href="#"
-                        class="btn d-grid btn-primary text-white">
-                        <i class="fas fa-info-circle"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="#"
-                        class="btn d-grid btn-secondary text-white">
-                        <i class="fas fa-pencil-alt"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="#"
+                    <a href="<?php echo site_url('admin/deletePost/'.$pagination.'/'.$post['id']) ?>"
                         class="btn d-grid btn-danger text-white">
                         <i class="fas fa-trash-alt"></i>
                     </a>
@@ -61,15 +47,12 @@
         </tbody>
     </table>
     <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-end">
-            <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Précédent</a>
+        <ul class="pagination justify-content-center">
+            <li class="page-item <?php if($pagination == 1) echo "disabled" ?>">
+            <a class="page-link" href="<?php echo site_url('admin/page/'.($pagination - 1)) ?>">Previous</a>
             </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
             <li class="page-item">
-                <a class="page-link" href="#">Suivant</a>
+            <a class="page-link" href="<?php echo site_url('admin/page/'.($pagination + 1)) ?>">Next</a>
             </li>
         </ul>
     </nav>
