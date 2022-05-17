@@ -20,9 +20,9 @@ class Admin extends CI_Controller {
 	 */
     public function __construct() {
         parent::__construct();
-        if($this->session->userdata('user') == null) {
-            redirect(site_url('admin/login'));
-        }
+        // if($this->session->userdata('user') == null) {
+        //     redirect(site_url('admin/login'));
+        // }
         date_default_timezone_set('Africa/Nairobi');
         $this->load->helper('form');
     }
