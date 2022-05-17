@@ -6,6 +6,7 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="agw news, rechauffement climatique, actualités, environnement" name="keywords">
         <meta content="Les dernieres nouvelles sur le rechauffement climatique" name="description">
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
         <!-- Favicon -->
         <link href="<?php echo img_url('favicon.png') ?>" rel="icon">
@@ -152,10 +153,10 @@
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/slick/slick.min.js"></script>
+        <script src="<?php echo lib_url('easing/easing.min.js') ?>"></script>
+        <script src="<?php echo lib_url('slick/slick.min.js') ?>"></script>
 
         <!-- Template Javascript -->
-        <script src="js/main.js"></script>
+        <script src="<?php echo js_url('main.js') ?>"></script>
     </body>
 </html>

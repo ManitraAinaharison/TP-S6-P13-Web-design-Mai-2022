@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class posts_model extends CI_Model {
+class Posts_model extends CI_Model {
 
     public function getCategoriesPost() {
         $req = "select * from categorie";

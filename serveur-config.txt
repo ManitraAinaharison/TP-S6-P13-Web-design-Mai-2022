@@ -3,3 +3,16 @@ password mdpprom13
 hote mysql-agw-news-tp-s6.alwaysdata.net
 
 dbname agw-news-tp-s6_bdd
+
+Avant:
+mobile = 86%
+bureau = 98%
+
+Dimensionnez correctement les images
+Les éléments d'image ne possèdent pas de width ni de height explicites
+Diffusez des éléments statiques grâce à des règles de cache efficaces
+
+Apres:
+mobile = 86%
+bureau = 98%
+

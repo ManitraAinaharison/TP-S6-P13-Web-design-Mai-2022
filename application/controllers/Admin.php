@@ -30,8 +30,8 @@ class Admin extends CI_Controller {
 
 	public function listePosts($page) {
         $page = (int) $page;
-        $this->load->model('posts_model');
-        $listePosts = $this->posts_model->getlistePosts(null, $page);
+        $this->load->model('Posts_model');
+        $listePosts = $this->Posts_model->getlistePosts(null, $page);
         $data = array();
 		$data['view'] = 'liste_posts';
 		$data['listePosts'] = $listePosts;
@@ -40,8 +40,8 @@ class Admin extends CI_Controller {
 	}	
     
     public function ajoutPost() {
-        $this->load->model('posts_model');
-        $listeCateg = $this->posts_model->getCategoriesPost();
+        $this->load->model('Posts_model');
+        $listeCateg = $this->Posts_model->getCategoriesPost();
         $data = array();
 		$data['view'] = 'ajout_post';
 		$data['listeCateg'] = $listeCateg;
@@ -50,9 +50,9 @@ class Admin extends CI_Controller {
 
     public function deletePost($page, $id) {
         $page = (int) $page;
-        $this->load->model('posts_model');
-        $this->posts_model->deletePost($id);
-        $listePosts = $this->posts_model->getlistePosts(null, $page);
+        $this->load->model('Posts_model');
+        $this->Posts_model->deletePost($id);
+        $listePosts = $this->Posts_model->getlistePosts(null, $page);
         $data = array();
 		$data['view'] = 'liste_posts';
 		$data['listePosts'] = $listePosts;
@@ -61,7 +61,7 @@ class Admin extends CI_Controller {
     }
 
     public function ajouterPost() {
-        $this->load->model('posts_model');
+        $this->load->model('Posts_model');
         $categ = $this->input->post('categ');
         $titre = $this->input->post('titre');
         $resume = $this->input->post('resume');
@@ -80,7 +80,7 @@ class Admin extends CI_Controller {
             $data = array('upload_data' => $this->upload->data());
             $path = $data['upload_data']['file_name'];
         }
-        $this->posts_model->enregisterPost($categ, $titre, $resume, $contenu, $path);
+        $this->Posts_model->enregisterPost($categ, $titre, $resume, $contenu, $path);
         redirect(site_url('admin'));
     }
 }

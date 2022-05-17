@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
+	'hostname' => 'mysql-agw-news-tp-s6.alwaysdata.net',
 	'username' => '268551',
 	'password' => 'mdpprom13',
 	'database' => 'agw-news-tp-s6_bdd',

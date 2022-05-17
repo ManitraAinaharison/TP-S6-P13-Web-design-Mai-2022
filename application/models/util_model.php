@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class util_model extends CI_Model {
+class Util_model extends CI_Model {
 
     public function slugify($text, $divider = '-') {
         $text = preg_replace('~[^\pL\d]+~u', $divider, $text);

@@ -23,10 +23,10 @@ class Login extends CI_Controller {
     }
 
     public function seConnecter() {
-        $this->load->model('login_model');
+        $this->load->model('Login_model');
         $username = $this->input->post('username');
         $mdp = $this->input->post('mdp');
-        $user = $this->login_model->connexion($username, $mdp);
+        $user = $this->Login_model->connexion($username, $mdp);
         if($user == false) {
             redirect(site_url('admin/login?error=1'));
         } else {
